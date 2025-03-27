@@ -1,10 +1,12 @@
 import { Home } from '@/screens/Home'
+import { colors } from '@/styles/colors'
 
 import {
   Inter_400Regular,
   Inter_700Bold,
   useFonts,
 } from '@expo-google-fonts/inter'
+import { StatusBar } from 'react-native'
 
 export default function App() {
   useFonts({
@@ -12,5 +14,13 @@ export default function App() {
     Inter_700Bold,
   })
 
-  return <Home />
+  return (
+    <>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor={colors.gray['700']}
+      />
+      <Home />
+    </>
+  )
 }
