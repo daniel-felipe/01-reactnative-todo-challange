@@ -24,15 +24,4 @@ export const styles = StyleSheet.create({
     gap: 4,
     marginTop: -27,
   },
-  input: {
-    flex: 1,
-    height: 54,
-    padding: 16,
-    borderRadius: 8,
-    backgroundColor: colors.gray['500'],
-    borderWidth: 1,
-    borderColor: colors.gray['700'],
-    fontSize: 16,
-    fontFamily: fontFamily.regular,
-  },
 })
