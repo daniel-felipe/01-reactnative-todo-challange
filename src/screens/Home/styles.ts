@@ -17,7 +17,15 @@ export const styles = StyleSheet.create({
   main: {
     paddingHorizontal: 24,
   },
+  inputWrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: 4,
+    marginTop: -27,
+  },
   input: {
+    flex: 1,
     height: 54,
     padding: 16,
     borderRadius: 8,
@@ -26,6 +34,5 @@ export const styles = StyleSheet.create({
     borderColor: colors.gray['700'],
     fontSize: 16,
     fontFamily: fontFamily.regular,
-    marginTop: -27,
   },
 })
