@@ -8,6 +8,7 @@ import { Button } from '@/components/Button'
 import { TaskInput } from '@/components/TaskInput'
 import { colors } from '@/styles/theme'
 
+import { EmptyState } from '@/components/EmptyState'
 import { styles } from './styles'
 
 export function Home() {
@@ -35,6 +36,7 @@ export function Home() {
             <Text style={styles.counter}>0</Text>
           </View>
         </View>
+        <EmptyState />
       </View>
     </SafeAreaView>
   )
