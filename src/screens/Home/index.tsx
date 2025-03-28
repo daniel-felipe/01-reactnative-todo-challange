@@ -8,8 +8,19 @@ import { styles } from './styles'
 import logo from '@/assets/logo.png'
 import { Button } from '@/components/Button'
 import { PlusCircle } from 'phosphor-react-native'
+import { useState } from 'react'
 
 export function Home() {
+  const [isInputFocused, setIsInputFocused] = useState(false)
+
+  function handleInputFocus() {
+    setIsInputFocused(true)
+  }
+
+  function handleInputBlur() {
+    setIsInputFocused(false)
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -20,7 +31,12 @@ export function Home() {
           <TextInput
             placeholder="Adicione uma nova tarefa"
             placeholderTextColor={colors.gray['300']}
-            style={styles.input}
+            style={[
+              styles.input,
+              isInputFocused && { borderColor: colors.purple.dark },
+            ]}
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
           />
           <Button>
             <PlusCircle size={16} color={colors.white} />
