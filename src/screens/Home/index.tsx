@@ -1,4 +1,4 @@
-import { Image, TextInput, View } from 'react-native'
+import { Image, Text, TextInput, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import { PlusCircle } from 'phosphor-react-native'
@@ -22,6 +22,18 @@ export function Home() {
           <Button>
             <PlusCircle size={16} color={colors.white} />
           </Button>
+        </View>
+
+        <View style={styles.info}>
+          <View style={styles.created}>
+            <Text style={styles.createdText}>Criadas</Text>
+            <Text style={styles.counter}>0</Text>
+          </View>
+
+          <View style={styles.done}>
+            <Text style={styles.doneText}>Concluídas</Text>
+            <Text style={styles.counter}>0</Text>
+          </View>
         </View>
       </View>
     </SafeAreaView>
