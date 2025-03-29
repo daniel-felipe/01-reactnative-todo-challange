@@ -1,5 +1,10 @@
-import { Text } from 'react-native'
+import { ScrollView, View } from 'react-native'
+import { Task } from '../Task'
 
 export function TaskList() {
-  return <Text>Task List</Text>
+  return (
+    <ScrollView>
+      <Task />
+    </ScrollView>
+  )
 }
